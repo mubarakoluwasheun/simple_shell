@@ -43,7 +43,7 @@ char **_envcopy(void)
 }
 
 /**
- * free_env - Frees the environment copy
+ * free_environ - Frees the environment copy
  *
  * Return: Returns nothing (void)
  */
