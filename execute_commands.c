@@ -4,7 +4,7 @@ int file_error_handler(char *path);
 int execute_commands(char *path, int *ret);
 
 /**
- * file_error_hanlder - Prints "can't open" if the file doesn't exist or
+ * file_error_handler - Prints "can't open" if the file doesn't exist or
  *		    lacks proper permissions
  * @path: Path to the file
  *
