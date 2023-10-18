@@ -140,14 +140,14 @@ ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
  *
  * Return: Always 0;
  */
-void handle_comment(char *buf)
+/*void handle_comment(char *buf)
 {
 	char *p;
 
 	p = _strchr(buf, '#');
 	if (p && (!p || is_whitespace(*(p - 1))))
 		*p = '\0';
-}
+}*/
 
 /**
  * is_whitespace - function checks if a character is a whitespace
@@ -155,7 +155,7 @@ void handle_comment(char *buf)
  *
  * Return: 1 if c is a whitespace, 0 otherwise
  */
-int is_whitespace(char c)
+/*int is_whitespace(char c)
 {
 	switch (c)
 	{
@@ -168,4 +168,4 @@ int is_whitespace(char c)
 		default:
 			return (0);
 	}
-}
+}*/
