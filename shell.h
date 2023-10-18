@@ -65,6 +65,9 @@ list_node *get_path(char *path);
 int execute(char **args, char **arg0);
 void free_list(list_node *head);
 void split_line(char **line, ssize_t len);
+void handle_comment(char *buf);
+int is_whitespace(char c);
+
 
 /* Prototypes for the environment */
 char *environ_value(char *var, int len);
