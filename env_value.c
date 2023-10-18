@@ -121,6 +121,8 @@ void var_replace(char **args, int *ret)
 			old_bytes = new_bytes;
 			i = -1;
 		}
+		else
+			handle_comment(*args);
 		i++;
 	}
 }
