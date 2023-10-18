@@ -136,12 +136,12 @@ ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
 }
 
 /**
- * remove_comments - function replaces first instance of '#' with '\0'
+ * handle_comment - function replaces first instance of '#' with '\0'
  * @buf: address of the string to modify
  *
  * Return: Always 0;
  */
-void remove_comments(char *buf)
+void handle_comment(char *buf)
 {
 	char *p;
 
