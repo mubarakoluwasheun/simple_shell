@@ -76,7 +76,7 @@ char *environ_value(char *var, int len)
  * @ret: A pointer to the return value of the last command
  */
 
- void var_replace(char **args, int *ret)
+void var_replace(char **args, int *ret)
 {
 	int len, i = 0, j = 0;
 	char *new_bytes, *old_bytes = NULL, *value = NULL;
