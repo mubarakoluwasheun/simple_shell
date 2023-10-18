@@ -34,7 +34,7 @@ extern char *name;
 extern int cmd_hist;
 
 /**
- * struct list_path - A struct type defining a linked list
+ * struct list_node - A struct type defining a linked list
  * @dir: The directory path
  * @next: A pointer to the next node
  */
@@ -65,8 +65,6 @@ list_node *get_path(char *path);
 int execute(char **args, char **arg0);
 void free_list(list_node *head);
 void split_line(char **line, ssize_t len);
-void handle_comment(char *c);
-int is_whitespace(char c);
 
 /* Prototypes for the environment */
 char *environ_value(char *var, int len);
