@@ -110,7 +110,6 @@ ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
 		return (-1);
 	while (c != '\n')
 	{
-		handle_comment(buffer);
 		r = read(STDIN_FILENO, &c, 1);
 		if (r == -1 || (r == 0 && input == 0))
 		{
