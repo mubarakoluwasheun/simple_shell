@@ -52,7 +52,7 @@ typedef struct list_node
 typedef struct builtins
 {
 	char *name;
-	int (*fpt)(char **, char **);
+	int (*fpt)(char **argv, char **first);
 } builtins;
 
 /* Some Of The Function Prototypes required for the execution of some commands  */
