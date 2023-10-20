@@ -1,12 +1,9 @@
 #include "shell.h"
 
+char *cd_error(char **args);
 char *env_error(char **args);
 char *exit_error(char **args);
-char *cd_error(char **args);
 char *syntax_error(char **args);
-
-char *name = "hsh"; /* define and initialize name */
-int cmd_hist = 0; /* define and initialize cmd_hist */
 
 /**
  * cd_error - Creates an error message for 'cd' errors

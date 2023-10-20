@@ -154,6 +154,7 @@ int handle_stdin_cmd(int *ret)
 	free(size);
 	if (!args)
 		return (status);
+
 	if (check_stdin_cmd(args) != 0)
 	{
 		*ret = 2;

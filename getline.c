@@ -96,7 +96,7 @@ void _setlineptr(char **lineptr, size_t *n, char *buffer, size_t b)
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
 {
 	int r;
-	char c = 'c', *buffer;
+	char c = 'X', *buffer;
 	ssize_t bytes;
 	static ssize_t input;
 
@@ -133,40 +133,4 @@ ssize_t _getline(char **lineptr, size_t *n, FILE *stream)
 	if (r != 0)
 		input = 0;
 	return (bytes);
-}
-
-/**
- * handle_comment - function replaces first instance of '#' with '\0'
- * @buf: address of the string to modify
- *
- * Return: Always 0;
- */
-void handle_comment(char *buf)
-{
-	char *p;
-
-	p = strchr(buf, '#');
-	if (p && (!p || is_whitespace(*(p - 1))))
-		*p = '\0';
-}
-
-/**
- * is_whitespace - function checks if a character is a whitespace
- * @c: character to check
- *
- * Return: 1 if c is a whitespace, 0 otherwise
- */
-int is_whitespace(char c)
-{
-	switch (c)
-	{
-		case ' ':
-		case '\t':
-		case '\n':
-		case '\r':
-		case '\f':
-			return (1);
-		default:
-			return (0);
-	}
 }

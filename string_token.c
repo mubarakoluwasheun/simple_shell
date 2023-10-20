@@ -2,7 +2,7 @@
 
 int _toklen(char *str, char *delim);
 int _tokcount(char *str, char *delim);
-char **_strtok(char *line, char *delim);
+char **_strtok(char *str, char *delim);
 
 /**
  * _toklen - Finds the delimiter marking the end of a string

@@ -10,25 +10,25 @@
 list_node *append_node(list_node **head, char *path)
 {
 	list_node *tmp;
-	list_node *append_node = malloc(sizeof(list_node));
+	list_node *apnd_node = malloc(sizeof(list_node));
 
-	if (!append_node)
+	if (!apnd_node)
 		return (NULL);
 
-	append_node->dir = path;
-	append_node->next = NULL;
+	apnd_node->dir = path;
+	apnd_node->next = NULL;
 
 	if (*head)
 	{
 		tmp = *head;
 		while (tmp->next != NULL)
 			tmp = tmp->next;
-		tmp->next = append_node;
+		tmp->next = apnd_node;
 	}
 	else
-		*head = append_node;
+		*head = apnd_node;
 
-	return (append_node);
+	return (apnd_node);
 }
 
 /**

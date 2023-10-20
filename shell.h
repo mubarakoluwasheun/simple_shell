@@ -28,10 +28,10 @@
 extern char **environ;
 
 /* Global program name */
-extern char *name;
+char *name;
 
 /* Global command history counter */
-extern int cmd_hist;
+int cmd_hist;
 
 /**
  * struct list_node - A struct type defining a linked list
@@ -59,14 +59,12 @@ typedef struct builtins
 void _setlineptr(char **lineptr, size_t *n, char *buffer, size_t b);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-char **_strtok(char *line, char *delim);
+char **_strtok(char *str, char *delim);
 char *find_path(char *command);
 list_node *get_path(char *path);
 int execute(char **args, char **arg0);
 void free_list(list_node *head);
 void split_line(char **line, ssize_t len);
-void handle_comment(char *buf);
-int is_whitespace(char c);
 
 
 /* Prototypes for the environment */
