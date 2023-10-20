@@ -144,7 +144,7 @@ int run_stdin_cmd(char **args, char **arg0, int *ret)
 int handle_stdin_cmd(int *ret)
 {
 	char **args, **arg0, *size = NULL;
-	int i = 0, status = 0;
+	int i = 0, j, status = 0;
 
 	size = get_stdin_cmd(size, ret);
 	if (!size)
@@ -179,10 +179,16 @@ int handle_stdin_cmd(int *ret)
 	}
 	if (args)
 		status = call_stdin_cmd(args, arg0, ret);
+
+	for (j = 0; arg0[j] != NULL; j++)
+	{
+		free(arg0[j]);
+	}
 	free(arg0);
 
 	return (status);
 }
+
 
 /**
  * check_stdin_cmd - Checks if there are any leading ';', ';;', '&&', or '||'

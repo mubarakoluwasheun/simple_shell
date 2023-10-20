@@ -5,6 +5,9 @@ char *env_error(char **args);
 char *exit_error(char **args);
 char *syntax_error(char **args);
 
+char *name; /* define and initialize name */
+int cmd_hist; /* define and initialize cmd_hist */
+
 /**
  * cd_error - Creates an error message for 'cd' errors
  * @args: An array of arguments passed to the command line
