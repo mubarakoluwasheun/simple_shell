@@ -55,7 +55,7 @@ typedef struct builtins
 	int (*fpt)(char **argv, char **first);
 } builtins;
 
-/* Some Of The Function Prototypes required for the execution of some commands  */
+/*Some Of The Function Prototypes required for the execution of some commands*/
 void _setlineptr(char **lineptr, size_t *n, char *buffer, size_t b);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
